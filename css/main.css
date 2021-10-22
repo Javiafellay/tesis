@@ -177,6 +177,13 @@ h3 {
   background-color: white;
   color: #fe4918;
 }
+.button.transparente {
+  background-color: transparent;
+  border: 2px solid #ffffff;
+}
+.button.transparente:hover {
+  border: 2px solid #fe4918;
+}
 
 ul {
   list-style: none;
@@ -633,7 +640,44 @@ div.testimoniales {
   text-transform: none;
   margin-top: 5px;
  }
-
+ /*Newsletter*/
+ div.newsletter {
+   position: relative;
+   height: auto;
+ }
+ div.newsletter::before {
+   background-image: url(../img/bg-newsletter.jpg);
+   content: '';
+ }
+ div.newsletter .contenido {
+   padding: 100px 0;
+   color: #ffffff;
+   text-align: center;
+   position: relative;
+ }
+ div.newsletter .contenido p {
+   font-size: 1.2em;
+   text-transform: lowercase;
+ }
+div.newsletter .contenido h3 {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 7vw;
+  font-family: 'PT Sans' sans-serif;
+}
+/**Cuenta Regresiva**/
+div.cuenta-regresiva ul li {
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.6rem;
+  text-align: center;
+}
+@media only screen and (min-width:768px){
+  div.cuenta-regresiva ul li {
+    width: 25%;
+    float: left;
+  }
+}
 
 
 /* ==========================================================================
