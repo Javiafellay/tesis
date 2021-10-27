@@ -4,15 +4,24 @@
 
     document.addEventListener('DOMContentLoaded', function(){
         //Agregando el Mapa
-        var map = L.map('mapa').setView([-25.372142, -57.532262], 16);
 
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
+    var mapa = document.querySelector('#mapa');
 
-        L.marker([-25.372142, -57.532262]).addTo(map)
-        .bindPopup('Tus Eventos PY 2021<br>Ya disponibles')
-        .openPopup();
+    if(mapa) {
+
+    var map = L.map('mapa').setView([-25.372142, -57.532262], 16);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    L.marker([-25.372142, -57.532262]).addTo(map)
+    .bindPopup('Tus Eventos PY 2021<br>Ya disponibles')
+    .openPopup();
+
+}
+
+
         
         //Campos Datos usuario
         var nombre = document.getElementById('nombre');
