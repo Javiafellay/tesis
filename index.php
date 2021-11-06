@@ -1,77 +1,4 @@
-<!doctype html>
-<html class="no-js" lang="">
-
-<head>
-  <meta charset="utf-8">
-  <title></title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
-
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/all.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Oswald:wght@200;400;700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/main.css">
-
-  <meta name="theme-color" content="#fafafa">
-</head>
-
-<body>
-  <!--[if IE]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-  <![endif]-->
-
-  <header class="site-header">
-    <div class="hero">
-      <div class="contenido-header">
-        <nav class="redes-sociales">
-          <a href="#"><i class="fab fa-facebook"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-pinterest"></i></a>
-          <a href="#"><i class="fab fa-youtube"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-        </nav>
-        <div class="informacion-evento">
-          <div class="clearfix">
-            <div class="clearfix">
-              <p class="fecha"><i class="fas fa-calendar"></i> 10-12-21</p>
-              <p class="ciudad"><i class="fas fa-map-marker-alt"></i> San Lorenzo, PY</p>
-            </div>
-
-            <h1 class="nombre-sitio">Tus Eventos Paraguay</h1>
-            <p class="slogan">El mejor sitio para <span>reservar tus seminarios</span></p>
-          </div>
-        </div><!--.Informacion-evento-->
-
-      </div>
-    </div><!--hero-->
-  </header>
-
-  <div class="barra">
-    <div class="contenedor clearfix">
-      <div class="logo">
-        <img src="img/logo.svg" alt="LOGO">
-      </div>
-      <div class="menu-movil">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-
-      <nav class="navegacion-principal clearfix">
-        <a href="#">Conferencia</a>
-        <a href="#">Calendario</a>
-        <a href="#">Invitados</a>
-        <a href="registro.html">Reservaciones</a>
-      </nav>
-    </div><!--Contenedor-->
-  </div><!--Barra-->
+<?php include_once 'includes/templates/header.php'; ?>
 
   <section class="seccion contenedor">
     <h2>El mejor Lugar para Reservar tus seminarios en PY</h2>
@@ -105,7 +32,6 @@
             </div>
           </div>
 
-          <div id="talleres" class="info-curso ocultar clearfix">
             <div class="detalle-evento">
               <h3>Responsive Web Design</h3>
               <p> <i class="fas fa-clock"></i>20:00hs</p>
@@ -114,6 +40,45 @@
             </div>
             <a href="#" class="button float-right">Ver Todos</a>
           </div><!--Talleres-->
+
+          <div id="conferencias" class="info-curso ocultar clearfix">
+            <div class="detalle-evento">
+              <h3>Como ser Freelance</h3>
+              <p> <i class="fas fa-clock"></i>19:00hs</p>
+              <p><i class="fas fa-calendar"></i>11 de Diciembre</p>
+              <p><i class="fas fa-user"></i>Rosa Melchoto</p>
+            </div>
+          </div>
+
+          <div id="conferencias" class="info-curso ocultar clearfix">
+            <div class="detalle-evento">
+              <h3>Desarrollo UX/UI</h3>
+              <p> <i class="fas fa-clock"></i>20:00hs</p>
+              <p><i class="fas fa-calendar"></i>10 de Diciembre</p>
+              <p><i class="fas fa-user"></i>Stella Prieto</p>
+            </div>
+            <a href="#" class="button float-right">Ver Todos</a>
+          </div><!--Talleres-->
+
+          <div id="seminarios" class="info-curso ocultar clearfix">
+            <div class="detalle-evento">
+              <h3>Pierde el Miedo a Programar</h3>
+              <p> <i class="fas fa-clock"></i>16:00hs</p>
+              <p><i class="fas fa-calendar"></i>10 de Diciembre</p>
+              <p><i class="fas fa-user"></i>Germán Mereles</p>
+            </div>
+          </div>
+
+          <div id="seminarios" class="info-curso ocultar clearfix">
+            <div class="detalle-evento">
+              <h3>Tecnologias del Futuro</h3>
+              <p> <i class="fas fa-clock"></i>20:00hs</p>
+              <p><i class="fas fa-calendar"></i>10 de Diciembre</p>
+              <p><i class="fas fa-user"></i>Martin Campuzano</p>
+            </div>
+            <a href="#" class="button float-right">Ver Todos</a>
+          </div><!--Talleres-->
+
         </div><!--Programa Evento-->
       </div><!--contenedor-->
     </div><!--contenido-programa-->
@@ -166,7 +131,7 @@
       <ul class="resumen-evento clearfix">
         <li><p class="numero">6</p>Invitados</li>
         <li><p class="numero">15</p>Talleres</li>
-        <li><p class="numero">3</p>Dias</li>
+        <li><p class="numero">12</p>Dias</li>
         <li><p class="numero">9</p>Conferencias</li>
       </ul>
     </div>
@@ -276,52 +241,4 @@
     </div>
   </section>
 
-  <footer class="site-footer">
-    <div class="contenedor clearfix">
-      <div class="footer-informacion">
-        <h3>Sobre <span>Tus Eventos Py</span></h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, recusandae deserunt voluptas veniam officiis quam reiciendis nihil, aliquid ratione, quidem blanditiis temporibus autem necessitatibus vero ut incidunt vel sit commodi?</p>
-      </div>
-      <div class="footer-informacion">
-        <h3>Últimos<span>tweets</span></h3>
-        <ul>
-          <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, dignissimos accusantium sed reprehenderit saepe voluptatibus, velit libero magnam exercitationem, nam vitae autem sunt. Vero omnis adipisci perferendis cumque, dolore blanditiis. </li>
-          <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, dignissimos accusantium sed reprehenderit saepe voluptatibus, velit libero magnam exercitationem, nam vitae autem sunt. Vero omnis adipisci perferendis cumque, dolore blanditiis. </li>
-          <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, dignissimos accusantium sed reprehenderit saepe voluptatibus, velit libero magnam exercitationem, nam vitae autem sunt. Vero omnis adipisci perferendis cumque, dolore blanditiis. </li>
-        </ul>
-      </div>
-      <div class="footer-informacion">
-        <h3>Redes<span>Sociales</span></h3>
-        <nav class="redes-sociales">
-          <a href="#"><i class="fab fa-facebook"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-pinterest"></i></a>
-          <a href="#"><i class="fab fa-youtube"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-        </nav>
-      </div>
-    </div>
-
-    <p class="copyright">
-      Todos los Derechos Reservados Tus Eventos PY 2021.
-    </p>
-
-  </footer>
-
-
-  <script src="js/vendor/modernizr-3.8.0.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
-  <script src="js/plugins.js"></script>
-  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-  <script src="js/main.js"></script>
-
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async></script>
-</body>
-
-</html>
+  <?php include_once 'includes/templates/footer.php'; ?>

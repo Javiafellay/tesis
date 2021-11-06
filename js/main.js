@@ -144,3 +144,22 @@
     });//Documento Listo
 
 })();
+
+// $(function() {
+
+//     //Programa de Conferencias
+
+//     $('.programa-evento .info-curso:first').removeClass("ocultar" );
+//     $('.menu-programa a').on('click', function() {
+//         $('.ocultar').hide();
+//         var enlace = $(this).attr('href');
+//         $(enlace).fadeIn(1000);
+       
+//     });
+
+//     //Animaciones para los numeros
+//     $('.resumen-evento li:nth-child(1) p').animateNumber({ number: 6}, 1200);
+
+
+
+// });

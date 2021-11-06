@@ -377,6 +377,7 @@ div.programa-evento {
     width: 70%;
   }
 }
+
 @media only screen and (min-width:992px) {
   div.programa-evento{
     width: 50%;
@@ -400,6 +401,19 @@ nav.menu-programa a {
   font-family: 'Oswald', sans-serif;
   margin-bottom: 10px;
   font-size: 1.2em;
+  position: relative;
+}
+nav.menu-programa a.activo::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  height: 20px;
+  width: 30px;
+  background-image: url(../img/talleres-flecha.jpg);
+  bottom: -20px;
 }
 @media only screen and (min-width:768px) {
   nav.menu-programa a {
@@ -411,6 +425,9 @@ div.detalle-evento p i {
   color: #fe4918;
   font-size: 1.6em;
   margin-right: 10px;
+}
+div.ocultar {
+  display: none!important;
 }
 /**Detalle Evento**/
 div.detalle-evento {
@@ -834,6 +851,50 @@ input[disabled].button {
   display: none;
 }
 
+/* Calendario*/
+div.calendario h3 {
+  background-color: #fe4918;
+  clear: both;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+div.calendario::after{
+  clear: both;
+  display: block;
+  content: '';
+}
+
+div .dia {
+  width: 50%;
+  float: left;
+  border: 2px solid #fbfcfb;
+  transition: all .3s ease;
+}
+@media only screen and (min-width: 768px) {
+  div.dia {
+    width: 33.3%;
+    min-height: 240px;
+    padding-top: 20px;
+  }
+}
+div.dia:hover {
+  background-color: #c7b6b6;
+  -webkit-transform: scale(1.1);
+}
+dia.dia p.titulo {
+  color: #fe4918!important;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+div.dia p{
+  font-size: 1em;
+}
+div.dia i {
+  color: #fe4918;
+  font-size: 1.6em;
+}
 
 /* ==========================================================================
    Helper classes
