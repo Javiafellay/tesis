@@ -145,7 +145,13 @@
 
 })();
 
-// $(function() {
+ $(function() {
+
+    //Agregar clase a Menu
+    $('body.conferencia .navegacion-principal a:contains("Conferencia")').addClass('activo');
+    $('body.calendario .navegacion-principal a:contains("Calendario")').addClass('activo');
+    $('body.invitados .navegacion-principal a:contains("Invitados")').addClass('activo');
+
 
 //     //Programa de Conferencias
 
@@ -161,5 +167,8 @@
 //     $('.resumen-evento li:nth-child(1) p').animateNumber({ number: 6}, 1200);
 
 
+ });
 
-// });
+// Colorbox
+
+// $('.invitado-info').colorbox({inline:true, width:"50%"});

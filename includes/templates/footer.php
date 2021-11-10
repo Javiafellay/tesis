@@ -38,6 +38,7 @@
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
   <script src="js/plugins.js"></script>
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script src="jquery.colorbox-min.js"></script>
   <script src="jquery.animateNumber.min"></script>
   <script src="js/main.js"></script>
 
