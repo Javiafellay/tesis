@@ -7,8 +7,6 @@
 
         try {
 
-//crear la coneccion a la base de datos
-
     require_once('includes/funciones/bd.conexion.php');
 
         $sql = " SELECT `evento_id`, `nombre_evento`, `fecha_evento`, `hora_evento`, `cat_evento`, `icono`, `nombre_invitado`, `apellido_invitado`  ";
