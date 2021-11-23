@@ -44,6 +44,8 @@
         var camisas = document.getElementById('camisa_evento');
         var etiquetas = document.getElementById('etiquetas');
 
+        botonRegistro.disabled = true;
+
         calcular.addEventListener('click', calcularMontos);
 
         pase_dia.addEventListener('blur', mostrarDias);
@@ -117,6 +119,9 @@
                         lista_productos.innerHTML += listadoProductos[i] + '<br/>'
                     }
                     suma.innerHTML = "$ " + totalPagar.toFixed(2);
+
+                    botonRegistro.disabled = false;
+                    document.getElementById('total_pedido').value = totalPagar;
             }
         }
 

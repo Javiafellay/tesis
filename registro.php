@@ -1,80 +1,8 @@
-<!doctype html>
-<html class="no-js" lang="">
-
-<head>
-  <meta charset="utf-8">
-  <title></title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
-
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/all.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Oswald:wght@200;400;700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/main.css">
-
-  <meta name="theme-color" content="#fafafa">
-</head>
-
-<body>
-  <!--[if IE]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-  <![endif]-->
-
-  <header class="site-header">
-    <div class="hero">
-      <div class="contenido-header">
-        <nav class="redes-sociales">
-          <a href="#"><i class="fab fa-facebook"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-pinterest"></i></a>
-          <a href="#"><i class="fab fa-youtube"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-        </nav>
-        <div class="informacion-evento">
-          <div class="clearfix">
-            <div class="clearfix">
-              <p class="fecha"><i class="fas fa-calendar"></i> 10-12-21</p>
-              <p class="ciudad"><i class="fas fa-map-marker-alt"></i> San Lorenzo, PY</p>
-            </div>
-
-            <h1 class="nombre-sitio">Tus Eventos Paraguay</h1>
-            <p class="slogan">El mejor sitio para <span>reservar tus seminarios</span></p>
-          </div>
-        </div><!--.Informacion-evento-->
-
-      </div>
-    </div><!--hero-->
-  </header>
-
-  <div class="barra">
-    <div class="contenedor clearfix">
-      <div class="logo">
-        <img src="img/logo.svg" alt="LOGO">
-      </div>
-      <div class="menu-movil">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-
-      <nav class="navegacion-principal clearfix">
-        <a href="#">Conferencia</a>
-        <a href="#">Calendario</a>
-        <a href="#">Invitados</a>
-        <a href="registro.html">Reservaciones</a>
-      </nav>
-    </div><!--Contenedor-->
-  </div><!--Barra-->
+<?php include_once 'includes/templates/header.php'; ?>
 
   <section class="seccion contenedor">
     <h2>Registro de Usuarios</h2>
-    <form id="registro" class="registro" action="index.html" method="post">
+    <form id="registro" class="registro" action="validar_registro.php" method="post">
         <div id="datos_usuario" class="resgistro caja clearfix">
             <div class="campo">
                 <label for="nombre">Nombre:</label>
@@ -106,7 +34,7 @@
                     </ul>
                    <div class="orden">
                        <label for="pase_dia">Boletos Deseados:</label>
-                       <input type="number" min="0" id="pase_dia" size="3" placeholder="0">
+                       <input type="number" min="0" id="pase_dia" size="3" name="boletos[]" placeholder="0">
                    </div>
                   </div>
                 </li>
@@ -122,7 +50,7 @@
                     </ul>
                     <div class="orden">
                         <label for="pase_completo">Boletos Deseados:</label>
-                        <input type="number" min="0" id="pase_completo" size="3" placeholder="0">
+                        <input type="number" min="0" id="pase_completo" size="3" name="boletos[]" placeholder="0">
                     </div>
                   </div>
                 </li>
@@ -138,7 +66,7 @@
                     </ul>
                     <div class="orden">
                         <label for="pase_dosdias">Boletos Deseados:</label>
-                        <input type="number" min="0" id="pase_dosdias" size="3" placeholder="0">
+                        <input type="number" min="0" id="pase_dosdias" size="3" name="boletos[]" placeholder="0">
                     </div>
                   </div>
                 </li>
@@ -224,19 +152,19 @@
                 <div class="extras">
                     <div class="orden">
                         <label for="camisa_evento">Camisa del evento $10 <small>(promoción 7% dto)</small></label>
-                        <input type="number" min="0" id="camisa_evento" size="3" placeholder="0">
+                        <input type="number" min="0" id="camisa_evento" name="pedido_camisas" size="3" placeholder="0">
                     </div><!--orden-->
                     <div class="orden">
                         <label for="etiquetas">Paquete de 10 etiquetas $2 <small>(HTML5,CSS3, JAVASCRIPT,CHROME)</small></label>
-                        <input type="number" min="0" id="etiquetas" size="3" placeholder="0">
+                        <input type="number" min="0" id="etiquetas" name="pedido_etiquetas" size="3" placeholder="0">
                     </div><!--orden-->
                     <div class="orden">
                         <label for="regalo">Seleccione un Regalo</label><br>
-                        <select id="regalo" required>
+                        <select id="regalo" name="regalo" required>
                             <option value="">--Selecione un Regalo--</option>
-                            <option value="ETI">Etiquetas</option>
-                            <option value="PUL">Pulsera</option>
-                            <option value="PLU">Plumas</option>
+                            <option value="2">Etiquetas</option>
+                            <option value="1">Pulsera</option>
+                            <option value="3">Boligrafo</option>
                         </select>
                     </div><!--orden-->
                     <input type="button" id="calcular" class="button" value="Calcular">
@@ -250,7 +178,8 @@
                     <div id="suma-total">
 
                     </div>
-                    <input id="btnRegistro" type="submit" class="button" value="Pagar">
+                    <input type="hidden" name="total_pedido" id="total_pedido">
+                    <input id="btnRegistro" type="submit" name="submit" class="button" value="Pagar">
                 </div><!--total-->
             </div><!--caja-->
         </div><!--resumen-->
